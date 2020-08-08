@@ -11,10 +11,9 @@ import java.util.Scanner;
  *
  * @author Ratinder Bhullar
  */
-public abstract class Play extends Game  {
-    
-    
-     public void playGame(GroupOfCards deck,GroupOfCards hand1,
+public abstract class Play extends Game {
+
+    public void playGame(GroupOfCards deck, GroupOfCards hand1,
             GroupOfCards hand2, GroupOfCards discardPile) {
 
         Scanner stdin = new Scanner(System.in);
@@ -45,7 +44,7 @@ public abstract class Play extends Game  {
     }
 
     // Precondition: Can only be called at the end of the game!
-    public void declareWinner(GroupOfCards deck,GroupOfCards hand1) {
+    public void declareWinner(GroupOfCards deck, GroupOfCards hand1) {
         if (deck.getNumCards() == 0) {
             System.out.println("Sorry, the game has ended in a draw.");
         } else if (hand1.getNumCards() == 0) {
@@ -54,7 +53,8 @@ public abstract class Play extends Game  {
             System.out.println("Player 2, you win =)");
         }
     }
-public static void main(String[] args) {  
+
+    public static void main(String[] args) {
         playGame();
     }
 }
