@@ -77,50 +77,21 @@ public abstract class Game {
      * on your game.
      */
    
-    public void play() {
-
-        
-
-        
-        System.out.println("Welcome to UNO!!! Let's begin playing");
-        
-        System.out.println("Player 1, here is your hand:\n" + hand1);
-        System.out.println("What card would you like to discard? Please give the associated number.");
-        int card = input.nextInt();
-        discardPile.addCard(hand1.remove(card));
-
-        int turn = 2;
-
-        // The game ends if the deck or either player's hand is empty.
-        while (deck.getNumCards() > 0 && hand1.getNumCards() > 0 && hand2.getNumCards() > 0) {
-
-            playTurn(turn);
-
-            // Flip the player's turn.
-            if (turn == 1) {
-                turn = 2;
-            } else {
-                turn = 1;
-            }
-        }
-
-        declareWinner();
-
-    }
+    /**
+     * Play the game. This might be one method or many method calls depending
+     * on your game.
+     */
+    public abstract void play(GroupOfCards deck,GroupOfCards hand1,
+            GroupOfCards hand2, GroupOfCards discardPile) ;
+    
+    
 
     /**
      * When the game is over, use this method to declare and display a winning
      * player.
      */
-    public void declareWinner() {
-        if (deck.getNumCards() == 0) {
-            System.out.println("Sorry, the game has ended in a draw.");
-        } else if (hand1.getNumCards() == 0) {
-            System.out.println("Player 1, you win =)");
-        } else {
-            System.out.println("Player 2, you win =)");
-        }
-    }
+    public abstract void declareWinner(GroupOfCards deck,GroupOfCards hand1);
+
 
     // Plays one turn for the player number indicated.
     public void playTurn(int player) {
@@ -181,12 +152,5 @@ public abstract class Game {
             }
 
         }
-    }
-
-    public static void main(String[] args) {
-        
-        
-        Game myGame = new Game() {};
-        myGame.play();
     }
 }
