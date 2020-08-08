@@ -19,6 +19,7 @@ public abstract class Play extends Game  {
 
         Scanner stdin = new Scanner(System.in);
 
+        System.out.println("Welcome to UNO!!! Let's Play");
         System.out.println("Player 1, here is your hand:\n" + hand1);
         System.out.println("What card would you like to discard? Please give the associated number.");
         int card = stdin.nextInt();
