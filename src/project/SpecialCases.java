@@ -10,6 +10,5 @@ package project;
  * @author Ratinder Bhullar
  */
 public class SpecialCases {
-    
-    
+        
 }
