@@ -1,9 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package project;
+package UNO;
+
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,12 +12,12 @@ public class GroupOfCards {
     private ArrayList <Card> cards;
     final public static int MAXCARDS = 72;
     private int size;//the size of the grouping
-    
+
     public GroupOfCards()
     {
         cards = new ArrayList<Card>();
     }
-    
+
     /**
      * A method that will get the group of cards as an ArrayList
      * @return the group of cards.
@@ -30,13 +26,13 @@ public class GroupOfCards {
     {
         return cards;
     }
-    
+
     public boolean addCard(Card c) {
 
         // Don't allow us to add this card if we're full.
         if (cards.size() == MAXCARDS) {
             return false;
-        } 
+        }
         // It's okay to add the card.
         else {
             cards.add(c);
@@ -89,7 +85,7 @@ public class GroupOfCards {
         }
 
     }
-    
+
     public void shuffle()
     {
         Collections.shuffle(cards);
@@ -108,7 +104,7 @@ public class GroupOfCards {
     public void setSize(int givenSize) {
         size = MAXCARDS;
     }
-    
+
     @Override
     public String toString() {
 
@@ -123,7 +119,7 @@ public class GroupOfCards {
         // Now we have the String representation of the whole group.
         return answer;
     }
-    
+
     // Returns the number of cards.
     public int getNumCards() {
         return cards.size();

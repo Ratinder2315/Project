@@ -1,19 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package project;
+package UNO;
 
 import java.util.Random;
-
-/**
- *
- * @author Ratinder Bhullar
- */
-public abstract class Card 
+public abstract class Card
 {
-   final private static String[] colors = {"Yellow", "Red", "Green", "Blue"};
+    final private static String[] colors = {"Yellow", "Red", "Green", "Blue"};
 
     private int color;
     private int number;
