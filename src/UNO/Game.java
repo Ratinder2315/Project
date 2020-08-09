@@ -7,7 +7,7 @@ import java.util.ArrayList;
  *
  * @author Ratinder Bhullar
  */
-public abstract class Game {
+public abstract class Game{
     private final String gameName = "UNO";//the title of the game
     private ArrayList <Player> players;// the players of the game
 
@@ -42,11 +42,6 @@ public abstract class Game {
     {
         this.players = players;
     }
-
-    /**
-     * Play the game. This might be one method or many method calls depending
-     * on your game.
-     */
 
     /**
      * Play the game. This might be one method or many method calls depending

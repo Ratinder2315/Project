@@ -6,7 +6,7 @@ import java.util.Scanner;
  *
  * @author Ratinder Bhullar
  */
-public class PlayGame extends Game {
+public class PlayGame extends Game{
 
     final private static int NUMCARDSHAND = 7;
 
