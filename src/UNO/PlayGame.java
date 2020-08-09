@@ -14,8 +14,8 @@ public class PlayGame extends Game{
     private GroupOfCards discardPile;
     private GroupOfCards hand1;
     private GroupOfCards hand2;
-    private String name1;
-    private String name2;
+    private Player name1;
+    private Player name2;
 
     Scanner input = new Scanner(System.in);
 
@@ -39,7 +39,6 @@ public class PlayGame extends Game{
             hand2.addCard(deck.removeFromTop());
         }
     }
-
     
     @Override
     public void play() {
@@ -47,14 +46,11 @@ public class PlayGame extends Game{
         System.out.println("Welcome to UNO!!! Let's Play");
         
         System.out.println("Enter name1 name");
-       name1=input.next();
-       
-       System.out.println("Enter player 2 id");
-       int id1=input.nextInt();
+       name1.setPlayerID(input.next());
+
         System.out.println("Enter player 2 name");
-       name2=input.next();
-       System.out.println("Enter player 2 id");
-       int id2=input.nextInt();
+       name2.setPlayerID(input.next());
+
         System.out.println(name1 + ", here is your hand:\n" + hand1);
         System.out.println("What card would you like to discard? Please give the associated number.");
         int card = input.nextInt();
