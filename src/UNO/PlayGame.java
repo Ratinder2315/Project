@@ -100,7 +100,7 @@ public class PlayGame extends Game{
 
             // We have a card to play!
             if (hand1.canPlay(discardPile.getTopCard())) {
-                System.out.println("\nname1, here is your hand:\n" + hand1);
+                System.out.println("\n" + name1 + ", here is your hand:\n" + hand1);
 
                 System.out.println("What card would you like to discard? Please give the associated number.");
                 int card = input.nextInt();
@@ -114,13 +114,13 @@ public class PlayGame extends Game{
 
                 // UNO =)
                 if (hand1.getNumCards() == 1) {
-                    System.out.println("Player One says UNO!!!!");
+                    System.out.println(name1 + " says UNO!!!!");
                 }
             } // Add a card and show the result.
             else {
                 System.out.println("Sorry, you can't play on this card. A card has been drawn for you.");
                 hand1.addCard(deck.removeFromTop());
-                System.out.println("name1, here is your resulting hand:\n" + hand1);
+                System.out.println(name1 + ", here is your resulting hand:\n" + hand1);
             }
         } else {
 
@@ -139,13 +139,13 @@ public class PlayGame extends Game{
 
                 // UNO =)
                 if (hand2.getNumCards() == 1) {
-                    System.out.println("Player Two says UNO!!!!");
+                    System.out.println(name2 + " says UNO!!!!");
                 }
             } // Add a card and show the result.
             else {
                 System.out.println("Sorry, you can't play on this card. A card has been drawn for you.");
                 hand2.addCard(deck.removeFromTop());
-                System.out.println("name2, here is your resutling hand:\n" + hand2);
+                System.out.println(name2 + ", here is your resutling hand:\n" + hand2);
             }
 
         }
